@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Магазин Техніки - Комплектуючі для ПК</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            color: white;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 20px;
+        }
+
+        .main-nav a {
+            color: #ecf0f1;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .banner {
+            background-color: #3498db;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .banner-content h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .banner-content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .products {
+            padding: 40px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 20px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .btn-secondary {
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .footer-logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .footer-nav li {
+            margin-left: 20px;
+        }
+
+        .footer-nav a {
+            color: #ecf0f1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайту -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">ТехноСвіт</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Головна</a></li>
+                    <li><a href="#">Про магазин</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">Кошик</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Блок з банером -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Комплектуючі для ПК</h1>
+            <p>Великий вибір комплектуючих для вашого комп'ютера за вигідними цінами</p>
+            <a href="#" class="btn-primary">Перейти до каталогу</a>
+        </div>
+    </section>
+
+    <!-- Розділ з товарами -->
+    <section class="products">
+        <h2>Популярні комплектуючі</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="https://content1.rozetka.com.ua/goods/images/big/164397086.jpg" alt="Материнська плата">
+                <h3>Материнська плата Asus TUF Gaming B450-Plus II (sAM4, AMD B450, PCI-Ex16)</h3>
+                <p class="price">4 229 грн</p>
+                <a href="#" class="btn-secondary">Купити</a>
+            </div>
+            <div class="product-card">
+                <img src="https://artline.ua/storage/images/products/10982/gallery/135790/gallery_1674741350935878_0.webp" alt="Процесор">
+                <h3>Процесор Ryzen 7 5800X3D</h3>
+                <p class="price">8 125 грн</p>
+                <a href="#" class="btn-secondary">Купити</a>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWMKBBulFjmo6ySiq0tdDYCEyof8LPe8XFg0pzdXsgHk0FAfxQLzsEM5GEGp2VLNbYvLxHfQbL0EeaO1aFr8681hOZ-xXS_ZLwsxKTHAJ2Se-qm8v7Ke9YPg&usqp=CAE" alt="Відеокарта">
+                <h3>Відеокарта Palit GeForce RTX 4070 JetStream</h3>
+                <p class="price">25 000 грн</p>
+                <a href="#" class="btn-secondary">Купити</a>
+            </div>
+            <div class="product-card">
+                <img src="https://img.telemart.ua/374725-526249-product_popup/kingston-ddr4-32gb-2x16gb-3200mhz-fury-beast-black-kf432c16bb1k232.jpg" alt="Оперативна пам'ять">
+                <h3>Оперативна пам'ять Kingston Fury DDR4 32GB (2x16GB) 3200Mhz</h3>
+                <p class="price">3 000 грн</p>
+                <a href="#" class="btn-secondary">Купити</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал сайту -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="/">ТехноСвіт</a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Політика конфіденційності</a></li>
+                    <li><a href="#">Умови доставки</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
