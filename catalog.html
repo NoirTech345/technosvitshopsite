@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техносвіт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #003b5c;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            color: #005e8e;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #005e8e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .product button:hover {
+            background-color: #004b74;
+        }
+
+        footer {
+            background-color: #003b5c;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Техносвіт - Комплектуючі для ПК</h1>
+</header>
+
+<nav>
+    <a href="#">Головна</a>
+    <a href="#">Процесори</a>
+    <a href="#">Материнські плати</a>
+    <a href="#">Оперативна пам'ять</a>
+    <a href="#">Відеокарти</a>
+    <a href="#">Блоки живлення</a>
+    <a href="#">Охолодження</a>
+    <a href="#">Корпуси</a>
+    <a href="#">Про магазин</a>
+    <a href="#">Контакти</a>
+    <a href="#">Кошик</a>
+</nav>
+
+<div class="container">
+    <!-- Приклад товару 1 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Процесор Intel Core i9">
+        <h3>Процесор Intel Core i9</h3>
+        <p>Для максимальної продуктивності в іграх та роботі.</p>
+        <button>Купити</button>
+    </div>
+
+    <!-- Приклад товару 2 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Материнська плата MSI MAG B550 TOMAHAWK">
+        <h3>Материнська плата MSI MAG B550 TOMAHAWK</h3>
+        <p>Надійна та продуктивна плата для ваших потреб.</p>
+        <button>Купити</button>
+    </div>
+
+    <!-- Приклад товару 3 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Оперативна пам'ять Corsair Vengeance LPX">
+        <h3>Оперативна пам'ять Corsair Vengeance LPX</h3>
+        <p>16 GB DDR4 для чудової продуктивності.</p>
+        <button>Купити</button>
+    </div>
+
+    <!-- Приклад товару 4 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Відеокарта NVIDIA GeForce RTX 4090">
+        <h3>Відеокарта NVIDIA GeForce RTX 4090</h3>
+        <p>Для ультра-високих роздільних здатностей та частоти кадрів.</p>
+        <button>Купити</button>
+    </div>
+
+    <!-- Приклад товару 5 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Блок живлення Corsair RM850x">
+        <h3>Блок живлення Corsair RM850x</h3>
+        <p>850W, надійність та тиша для вашого ПК.</p>
+        <button>Купити</button>
+    </div>
+
+    <!-- Приклад товару 6 -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Система охолодження Noctua NH-D15">
+        <h3>Система охолодження Noctua NH-D15</h3>
+        <p>Максимальна ефективність повітряного охолодження.</p>
+        <button>Купити</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Техносвіт. Усі права захищено.</p>
+</footer>
+
+</body>
+</html>
