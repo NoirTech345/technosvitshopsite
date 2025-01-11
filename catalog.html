@@ -51,13 +51,29 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         .product img {
             width: 100%;
-            height: 200px; /* Устанавливаем фиксированную высоту */
-            object-fit: cover; /* Обрезаем изображения, чтобы сохранить пропорции */
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
         }
 
         .product h3 {
@@ -88,6 +104,7 @@
             cursor: pointer;
             font-size: 1.1em;
             margin-top: 10px;
+            transition: background-color 0.3s ease;
         }
 
         .product button:hover {
@@ -103,6 +120,90 @@
             width: 100%;
             bottom: 0;
         }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            width: 40%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal input, .modal button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal button {
+            background-color: #005e8e;
+            color: white;
+            cursor: pointer;
+        }
+
+        .modal button:hover {
+            background-color: #004b74;
+        }
+
+        .about, .contact {
+            padding: 30px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2, .contact h2 {
+            color: #005e8e;
+            font-size: 2em;
+        }
+
+        .about p, .contact p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -112,64 +213,73 @@
 </header>
 
 <nav>
-    <li><a href="main.html">Головна</a></li>
+    <a href="main.html">Головна</a>
+    <a href="#about">Про магазин</a>
+    <a href="#contact">Контакти</a>
 </nav>
 
 <div class="container">
-    <!-- Приклад товару 1 -->
+    <!-- Пример товара -->
     <div class="product">
         <img src="https://content2.rozetka.com.ua/goods/images/big/501216289.jpg" alt="Процесор Intel Core i9">
         <h3>Процесор Intel Core i9</h3>
         <p>Для максимальної продуктивності в іграх та роботі.</p>
         <p class="price">28,999 грн</p>
-        <button>Купити</button>
+        <button onclick="openModal()">Купити</button>
     </div>
 
-    <!-- Приклад товару 2 -->
-    <div class="product">
-        <img src="https://asset.msi.com/resize/image/global/product/product_7_20200520165812_5ec4f124dcab7.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="Материнська плата MSI MAG B550 TOMAHAWK">
-        <h3>Материнська плата MSI MAG B550 TOMAHAWK</h3>
-        <p>Надійна та продуктивна плата для ваших потреб.</p>
-        <p class="price">6,499 грн</p>
-        <button>Купити</button>
-    </div>
+    <!-- Другие товары... -->
+</div>
 
-    <!-- Приклад товару 3 -->
-    <div class="product">
-        <img src='https://ksd-images.lt/display/aikido/store/f92c7a6f8254cf479684733e4c34cd46.jpg' alt="Оперативна пам'ять Corsair Vengeance LPX">
-        <h3>Оперативна пам'ять Corsair Vengeance LPX</h3>
-        <p>16 GB DDR4 для чудової продуктивності.</p>
-        <p class="price">2,999 грн</p>
-        <button>Купити</button>
-    </div>
-
-    <!-- Приклад товару 4 -->
-    <div class="product">
-        <img src="https://b.428.ua/img/4007911/3000/2000/videokarta_msi_pci-e_geforce_rtx4090_24gb_ddr6x_rtx_4090_gaming_x_slim_24g~820~372.jpg" alt="Відеокарта NVIDIA GeForce RTX 4090">
-        <h3>Відеокарта NVIDIA GeForce RTX 4090</h3>
-        <p>Для ультра-високих роздільних здатностей та частоти кадрів.</p>
-        <p class="price">99,999 грн</p>
-        <button>Купити</button>
-    </div>
-
-    <!-- Приклад товару 5 -->
-    <div class="product">
-        <img src="https://compx.ua/image/cache/webp/catalog/products/77/490bd476-8d06-11ee-8f93-001b21ea407b-1400x1400.webp" alt="Блок живлення Corsair RM850x">
-        <h3>Блок живлення Corsair RM850</h3>
-        <p>850W, надійність та тиша для вашого ПК.</p>
-        <p class="price">4,499 грн</p>
-        <button>Купити</button>
-    </div>
-
-    <!-- Приклад товару 6 -->
-    <div class="product">
-        <img src="https://pcshop.ua/image/cache/webp/catalog/tovar/kuler-dlya-protsessora-noctua-nh-d15-g2-326x264.webp" alt="Система охолодження Noctua NH-D15">
-        <h3>Система охолодження Noctua NH-D15</h3>
-        <p>Максимальна ефективність повітряного охолодження.</p>
-        <p class="price">4,999 грн</p>
-        <button>Купити</button>
+<!-- Модальное окно для покупки -->
+<div id="purchaseModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Оформити покупку</h2>
+        <p>Заповніть форму, щоб завершити покупку.</p>
+        <form>
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <input type="email" id="email" placeholder="Ваш Email" required>
+            <input type="tel" id="phone" placeholder="Ваш телефон" required>
+            <textarea id="address" placeholder="Адреса доставки" required></textarea>
+            <button type="submit">Підтвердити покупку</button>
+        </form>
     </div>
 </div>
+
+<!-- Про магазин -->
+<section id="about" class="about">
+    <h2>Про магазин</h2>
+    <p>Техносвіт - це магазин, який спеціалізується на продажу комплектуючих для ПК, аксесуарів та іншої техніки. Ми пропонуємо тільки найкращі та найновіші продукти для ваших потреб.</p>
+</section>
+
+<!-- Контакты -->
+<section id="contact" class="contact">
+    <h2>Контакти</h2>
+    <p>Зв'яжіться з нами, якщо у вас є питання.</p>
+    <form>
+        <input type="text" placeholder="Ваше ім'я" required>
+        <input type="email" placeholder="Ваш Email" required>
+        <textarea placeholder="Ваше повідомлення" required></textarea>
+        <button type="submit">Надіслати</button>
+    </form>
+    <p>Телефон: +380 123 456 789</p>
+    <p>Адреса: вул. Технічна, 123, Київ</p>
+</section>
+
+<footer>
+    <p>Техносвіт - Всі права захищені</p>
+</footer>
+
+<script>
+    function openModal() {
+        document.getElementById("purchaseModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("purchaseModal").style.display = "none";
+    }
+</script>
 
 </body>
 </html>

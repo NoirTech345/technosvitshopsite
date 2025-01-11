@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про магазин - ТехноСвіт</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            color: white;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 20px;
+        }
+
+        .main-nav a {
+            color: #ecf0f1;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .about-us {
+            padding: 40px 20px;
+            background-color: #ecf0f1;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .about-us h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .footer-logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .footer-nav li {
+            margin-left: 20px;
+        }
+
+        .footer-nav a {
+            color: #ecf0f1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайту -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">ТехноСвіт</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Головна</a></li>
+                    <li><a href="about.html">Про магазин</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                    <li><a href="#">Кошик</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Розділ "Про магазин" -->
+    <section class="about-us">
+        <h2>Про магазин</h2>
+        <p>Ми пропонуємо широкий асортимент комплектуючих для ПК. Наш магазин працює на ринку вже більше 5 років, забезпечуючи своїх клієнтів тільки найкращими товаром за доступними цінами.</p>
+    </section>
