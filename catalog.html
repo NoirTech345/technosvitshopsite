@@ -16,40 +16,40 @@
         header {
             background-color: #2c3e50;
             color: #fff;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 1.5em;
             margin: 0;
         }
 
         nav {
             background-color: #003b5c;
-            padding: 10px;
+            padding: 8px;
             text-align: center;
         }
 
         nav a {
             color: #fff;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            padding: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
         }
 
         .product {
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
             text-align: center;
             opacity: 0;
             animation: fadeIn 1s forwards;
@@ -65,10 +65,10 @@
         }
 
         .product img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
 
@@ -77,45 +77,44 @@
         }
 
         .product h3 {
-            color: #005e8e;
-            font-size: 1.5em;
-            margin: 10px 0;
+            color: #005f8eaf;
+            font-size: 1em;
+            margin: 5px 0;
         }
 
         .product p {
-            font-size: 1.2em;
+            font-size: 0.9em;
             color: #555;
-            margin: 10px 0;
+            margin: 5px 0;
         }
 
         .product .price {
-            font-size: 1.4em;
+            font-size: 1.1em;
             font-weight: bold;
             color: #e74c3c;
-            margin: 10px 0;
+            margin: 5px 0;
         }
 
         .product button {
-            background-color: #005e8e;
+            background-color: #4CAF50;
             color: #fff;
-            padding: 10px 20px;
+            padding: 8px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.1em;
-            margin-top: 10px;
+            font-size: 0.9em;
             transition: background-color 0.3s ease;
         }
 
         .product button:hover {
-            background-color: #004b74;
+            background-color: #3e8e41;
         }
 
         footer {
             background-color: #003b5c;
             color: #fff;
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -135,17 +134,18 @@
 
         .modal-content {
             background-color: #fff;
-            margin: 10% auto;
-            padding: 20px;
-            width: 40%;
+            margin: 15% auto;
+            padding: 15px;
+            width: 80%;
+            max-width: 400px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
         .close {
             color: #aaa;
             float: right;
-            font-size: 28px;
+            font-size: 20px;
             font-weight: bold;
         }
 
@@ -156,10 +156,10 @@
             cursor: pointer;
         }
 
-        .modal input, .modal button {
+        .modal input, .modal textarea, .modal button {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+            padding: 8px;
+            margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
@@ -173,37 +173,6 @@
         .modal button:hover {
             background-color: #004b74;
         }
-
-        .about, .contact {
-            padding: 30px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .about h2, .contact h2 {
-            color: #005e8e;
-            font-size: 2em;
-        }
-
-        .about p, .contact p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact input, .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -214,12 +183,12 @@
 
 <nav>
     <a href="main.html">Головна</a>
-    <a href="#about">Про магазин</a>
-    <a href="#contact">Контакти</a>
+    <a href="about.html">Про магазин</a>
+    <a href="contact.html">Контакти</a>
 </nav>
 
 <div class="container">
-    <!-- Пример товара -->
+    <!-- Товары -->
     <div class="product">
         <img src="https://content2.rozetka.com.ua/goods/images/big/501216289.jpg" alt="Процесор Intel Core i9">
         <h3>Процесор Intel Core i9</h3>
@@ -228,7 +197,132 @@
         <button onclick="openModal()">Купити</button>
     </div>
 
-    <!-- Другие товары... -->
+    <div class="product">
+        <img src="https://api.e-server.com.ua/storage/170048/rs/U0540197_big___rs_1200_1200.jpg" alt="Відеокарта ASUS GeForce RTX 3060">
+        <h3>Відеокарта ASUS GeForce RTX 3060</h3>
+        <p>Для висококласних ігор та обробки відео.</p>
+        <p class="price">19,499 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+    <div class="product">
+        <img src="https://content1.rozetka.com.ua/goods/images/big/294107525.jpg" alt="Материнська плата MSI B450 TOMAHAWK MAX">
+        <h3>Материнська плата MSI B450 TOMAHAWK MAX</h3>
+        <p>Для сучасних процесорів Ryzen.</p>
+        <p class="price">4,999 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+    <div class="product">
+        <img src="https://content1.rozetka.com.ua/goods/images/big/496669713.jpg" alt="Оперативна пам'ять Corsair Vengeance LPX 16GB">
+        <h3>Оперативна пам'ять Corsair Vengeance LPX 16GB</h3>
+        <p>Надійна пам'ять для ігор та робочих задач.</p>
+        <p class="price">2,499 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.prom.ua/5327129213_w640_h320_blok-pitaniya-be.jpg" alt="Блок живлення be quiet! Pure Power 11 600W">
+        <h3>Блок живлення be quiet! Pure Power 11 600W</h3>
+        <p>Тиха та потужна енергія для вашого ПК.</p>
+        <p class="price">3,299 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+    <div class="product">
+        <img src="https://content2.rozetka.com.ua/goods/images/original/12241784.jpg" alt="Жорсткий диск Seagate Barracuda 2TB">
+        <h3>Жорсткий диск Seagate Barracuda 2TB</h3>
+        <p>Надійне зберігання даних.</p>
+        <p class="price">2,199 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+    <div class="product">
+        <img src="https://content1.rozetka.com.ua/goods/images/big/396843535.jpg" alt="SSD Samsung EVO 1TB">
+        <h3>SSD Samsung EVO 1TB</h3>
+        <p>Швидкість і продуктивність для вашого ПК.</p>
+        <p class="price">3,999 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+    <div class="product">
+        <img src="https://d.428.ua/img/2141763/3000/2000/kuler_dlya_protsessora_noctua_nh-d15_chromax_black~1493~1246.jpg" alt="Кулер для процесора Noctua NH-D15">
+        <h3>Кулер для процесора Noctua NH-D15</h3>
+        <p>Ефективне охолодження для потужних систем.</p>
+        <p class="price">4,499 грн</p>
+        <button onclick="openModal()">Купити</button>
+    </div>
+
+<div class="product">
+    <img src="https://content2.rozetka.com.ua/goods/images/big/489674544.jpg" alt="Телевізор Samsung UE43T5300AUXUA">
+    <h3>Телевізор Samsung UE43T5300AUXUA</h3>
+    <p>Менші ціни.Більше затишку</p>
+    <p class="price">11,999 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+<div class="product">
+    <img src="https://img.telemart.ua/53012-165130-product_popup/aerocool-kcas-600w-kcas-600.jpg" alt="Телевізор Samsung UE43T5300AUXUA">
+    <h3>Блок Живлення KCAS 600W</h3>
+    <p>Вогнегасник у подарунок.</p>
+    <p class="price">2,300 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+<div class="product">
+    <img src="https://hotline.ua/img/tx/265/2657478475.jpg" alt="AMD Ryzen 5 1600">
+    <h3>Процесор AMD Ryzen 5 1600</h3>
+    <p>Для гарної продуктивності в іграх та роботі.</p>
+    <p class="price">1,900 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+<div class="product">
+    <img src="https://content1.rozetka.com.ua/goods/images/big/371621067.jpg" alt="Пральна машина автоматична Beko WUE6626XBCW ">
+    <h3>Пральна машина автоматична Beko WUE6626XBCW </h3>
+    <p>З максимальним завантаженням до 6 кг і швидкістю віджимання до 1200 об/хв</p>
+    <p class="price">13,799 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+<div class="product">
+    <img src="https://content1.rozetka.com.ua/goods/images/big/164397086.jpg" alt="Материнська плата Asus TUF Gaming B450-Plus II (sAM4, AMD B450, PCI-Ex16)">
+    <h3>Материнська плата Asus TUF Gaming B450-Plus II (sAM4, AMD B450, PCI-Ex16)</h3>
+    <p>У пошуках неймовірного</p>
+    <p class="price">4,229 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+<div class="product">
+    <img src="https://www.guru3d.com/data/publish/224/7c3cc86e744e31ec9f9a8c922e1cbae76bad73/1736221068_guru3d.webp" alt="NVIDIA GEFORCE RTX5090">
+    <h3>Відеокарта NVIDIA Geforce RTX 5090</h3>
+    <p>Очікується</p>
+    <p class="price" style="color: gray; text-decoration: line-through;">84 227,73грн</p>
+</div>
+
+<div class="product">
+    <img src="https://artline.ua/storage/images/products/10982/gallery/135790/gallery_1674741350935878_0.webp" alt="Процесор Ryzen 7 5800X3D">
+    <h3>Процесор Ryzen 7 5800X3D</h3>
+    <p>Неймовірна потужність.</p>
+    <p class="price">8,125 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+<div class="product">
+    <img src="https://img.telemart.ua/374725-526249-product_popup/kingston-ddr4-32gb-2x16gb-3200mhz-fury-beast-black-kf432c16bb1k232.jpg" alt="Оперативна пам'ять Kingston Fury DDR4 32GB (2x16GB) 3200Mhz">
+    <h3>Оперативна пам'ять Kingston Fury DDR4 32GB (2x16GB) 3200Mhz</h3>
+    <p>Покращуйте пам'ять</p>
+    <p class="price">3,000 грн</p>
+    <button onclick="openModal()">Купити</button>
+</div>
+
+
+<div class="product">
+    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTWMKBBulFjmo6ySiq0tdDYCEyof8LPe8XFg0pzdXsgHk0FAfxQLzsEM5GEGp2VLNbYvLxHfQbL0EeaO1aFr8681hOZ-xXS_ZLwsxKTHAJ2Se-qm8v7Ke9YPg&usqp=CA" alt="Оперативна пам'ять Kingston Fury DDR4 32GB (2x16GB) 3200Mhz">
+    <h3>Відеокарта Palit GeForce RTX 4070 JetStream</h3>
+    <p>Powering Advanced AI</p>
+    <p class="price">25,000 грн</p>
+    <button onclick="openModal()">Купити</button>
 </div>
 
 <!-- Модальное окно для покупки -->
@@ -237,7 +331,7 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <h2>Оформити покупку</h2>
         <p>Заповніть форму, щоб завершити покупку.</p>
-        <form>
+        <form onsubmit="handleOrder(event)">
             <input type="text" id="name" placeholder="Ваше ім'я" required>
             <input type="email" id="email" placeholder="Ваш Email" required>
             <input type="tel" id="phone" placeholder="Ваш телефон" required>
@@ -247,29 +341,36 @@
     </div>
 </div>
 
-<!-- Про магазин -->
-<section id="about" class="about">
-    <h2>Про магазин</h2>
-    <p>Техносвіт - це магазин, який спеціалізується на продажу комплектуючих для ПК, аксесуарів та іншої техніки. Ми пропонуємо тільки найкращі та найновіші продукти для ваших потреб.</p>
-</section>
+<!-- Модальное окно для успешного заказа -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSuccessModal()">&times;</span>
+        <h2>Замовлення успішне!</h2>
+        <p>Дякуємо за ваше замовлення! З вами зв’яжуться для підтвердження.</p>
+        <button onclick="closeSuccessModal()">OK</button>
+    </div>
+</div>
 
-<!-- Контакты -->
-<section id="contact" class="contact">
-    <h2>Контакти</h2>
-    <p>Зв'яжіться з нами, якщо у вас є питання.</p>
-    <form>
-        <input type="text" placeholder="Ваше ім'я" required>
-        <input type="email" placeholder="Ваш Email" required>
-        <textarea placeholder="Ваше повідомлення" required></textarea>
-        <button type="submit">Надіслати</button>
-    </form>
-    <p>Телефон: +380 123 456 789</p>
-    <p>Адреса: вул. Технічна, 123, Київ</p>
-</section>
+<script>
+    function handleOrder(event) {
+        event.preventDefault(); // Предотвращаем перезагрузку страницы при отправке формы
+        closeModal(); // Закрываем окно покупки
+        openSuccessModal(); // Открываем окно успешного заказа
+    }
 
-<footer>
-    <p>Техносвіт - Всі права захищені</p>
-</footer>
+    function closeModal() {
+        document.getElementById("purchaseModal").style.display = "none";
+    }
+
+    function openSuccessModal() {
+        document.getElementById("successModal").style.display = "block";
+    }
+
+    function closeSuccessModal() {
+        document.getElementById("successModal").style.display = "none";
+    }
+</script>
+
 
 <script>
     function openModal() {

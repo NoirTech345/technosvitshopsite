@@ -13,8 +13,9 @@
         }
 
         body {
-            background-color: #f5f5f5;
+            background-color: #ffffff;
             color: #333;
+            line-height: 1.6;
         }
 
         a {
@@ -58,10 +59,11 @@
 
         .about-us {
             padding: 40px 20px;
-            background-color: #ecf0f1;
+            background-color: #ffffff;
             text-align: center;
             opacity: 0;
             animation: fadeIn 2s forwards;
+            margin-bottom: 0;
         }
 
         @keyframes fadeIn {
@@ -73,6 +75,7 @@
         .about-us h2 {
             font-size: 32px;
             margin-bottom: 20px;
+            color: #2c3e50;
         }
 
         .about-us p {
@@ -80,37 +83,18 @@
             margin-bottom: 15px;
         }
 
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 0;
+        .about-us ul {
+            margin-top: 20px;
+            text-align: left;
+            display: inline-block;
         }
 
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
+        .about-us ul li {
+            margin-bottom: 10px;
         }
 
-        .footer-logo a {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ecf0f1;
-        }
-
-        .footer-nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        .footer-nav li {
-            margin-left: 20px;
-        }
-
-        .footer-nav a {
-            color: #ecf0f1;
-            font-size: 14px;
+        body > *:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -123,11 +107,10 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="/">Головна</a></li>
+                    <li><a href="main.html">Головна</a></li>
                     <li><a href="about.html">Про магазин</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
                     <li><a href="contacts.html">Контакти</a></li>
-                    <li><a href="#">Кошик</a></li>
                 </ul>
             </nav>
         </div>
@@ -136,5 +119,16 @@
     <!-- Розділ "Про магазин" -->
     <section class="about-us">
         <h2>Про магазин</h2>
-        <p>Ми пропонуємо широкий асортимент комплектуючих для ПК. Наш магазин працює на ринку вже більше 5 років, забезпечуючи своїх клієнтів тільки найкращими товаром за доступними цінами.</p>
+        <p>Ми пропонуємо широкий асортимент комплектуючих для ПК. Наш магазин працює на ринку вже більше 5 років, забезпечуючи своїх клієнтів тільки найкращими товарами за доступними цінами.</p>
+        <p>Чому варто обрати нас:</p>
+        <ul>
+            <li>Гарантія якості на весь асортимент товарів.</li>
+            <li>Професійна консультація та допомога у виборі.</li>
+            <li>Зручна система доставки по всій Україні.</li>
+            <li>Регулярні акції та знижки для наших клієнтів.</li>
+            <li>Сучасний підхід до обслуговування.</li>
+        </ul>
+        <p>Приєднуйтесь до наших задоволених клієнтів і переконайтесь у перевагах "ТехноСвіт"!</p>
     </section>
+</body>
+</html>
